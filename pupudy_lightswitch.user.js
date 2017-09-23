@@ -1,8 +1,8 @@
 // ==UserScript==
-// @name         puputv 灯开关插件
+// @name         pupudy 灯开关插件
 // @namespace    undefined
 // @version      0.1
-// @description  puputv 播放页面去除右侧烂，右下角增加 灯开关 按钮
+// @description  pupudy 播放页面去除右侧烂，右下角增加 灯开关 按钮
 // @author       You
 // @match        *://pupudy.com/play?*
 // @grant        GM_addStyle
