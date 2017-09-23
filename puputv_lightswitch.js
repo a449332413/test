@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         puputv 开/关灯
+// @name         puputv 灯开关
 // @namespace    puputv
 // @version      0.1
 // @description  puputv 开/关灯
