@@ -1,0 +1,77 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+
+	"name": "多多淘客助手-增强版",
+	"description": "当您在浏览淘宝/天猫商品时，可以自动查询显示该商品淘宝客推广信息（佣金、推广计划、红包/优惠券）和商品价格走势，自动判断该商品是否参加了鹊桥活动并集成了强大的鹊桥商品搜索引擎，淘客站长推广必备利器。官方网站：http://www.chataoke.com",
+	"version": "3.4.6",
+	"permissions": [
+		"<all_urls>",
+		"contextMenus",
+		"tabs",
+		"storage",
+		"cookies",
+		"notifications",
+		"alarms",
+		"activeTab"
+	],
+	"background" : {
+		"scripts": [
+			"js/jquery.min.js",
+			"js/background.js"
+		]
+	},
+	"browser_action": {
+		"default_icon": "images/icon-16.png"
+	},
+	"icons": {
+		"16": "images/icon-16.png",
+		"32": "images/icon-32.png",
+		"48": "images/icon-48.png",
+		"64": "images/icon-64.png",
+		"128": "images/icon-128.png"
+	},
+    "browser_action": {
+        "default_icon": "images/icon-16.png",
+        "default_title": "淘宝客选品神器",
+        "default_popup": "popup.html"
+    },
+	"content_scripts": [
+		{
+			"matches": [
+				"*://*/*"
+			],
+			"js": [
+				"js/jquery.min.js",
+				"js/layer/layer.js",
+				"js/laytpl.js",
+				"js/common.js",
+				"js/highstock.js"
+			],
+			"css": [
+				"css/style.css",
+				"js/layer/skin/layer.css"
+			],
+			"all_frames":true
+		},{
+			"js": ["js/tongji.js"],
+			"matches": [
+				"*://item.taobao.com/*",
+				"*://world.taobao.com/*",
+				"*://detail.tmall.com/*",
+				"*://world.tmall.com/*",
+				"*://detail.ju.taobao.com/*",
+				"*://detail.yao.95095.com/*",
+				"*://chaoshi.detail.tmall.com/*",
+				"*://detail.tmall.hk/*",
+				"*://items.alitrip.com/*",
+				"*://hotel.alitrip.com/*",
+				"*://item.alitrip.com/*",
+				"*://detail.alitrip.com/*",
+				"*://*.alitrip.hk/*"
+			],
+			"run_at": "document_end"
+		}
+	]
+}

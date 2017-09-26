@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+<title>【查淘客】佣金助手</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="css/popup.css"/>
+<style>
+.error{ background:#FF0; color:red; text-align:center; font-weight:bold;}
+#xuanpinku_p,#logintip,#chaofantip,#huoqutip{ display:none}
+#chaofantip,#huoqutip{ text-align:center}
+.shortcut p{ padding-bottom:10px}
+
+.loading { 
+width:0;
+height:0;
+border-right:6px solid #fff;
+border-top:6px solid #000;
+border-left:6px solid #fff;
+border-bottom:6px solid #000;
+border-radius: 6px;
+-moz-border-radius: 6px;
+-webkit-border-radius: 6px;
+display:inline-block
+}
+.loading {
+animation: bganim 0.6s linear 0s infinite;
+-moz-animation: bganim 0.6s linear 0s infinite;
+-webkit-animation: bganim 0.6s linear 0s infinite;
+}
+@keyframes bganim {
+from { transform:rotate(0deg); } to { transform:rotate(360deg); }
+}
+@-moz-keyframes bganim {
+from { -moz-transform:rotate(0deg); } to { -moz-transform:rotate(360deg); }
+}
+@-webkit-keyframes bganim {
+from { -webkit-transform:rotate(0deg); } to { -webkit-transform:rotate(360deg); }
+}
+  </style>
+</head>
+<body style="height:100%">
+<div class="content-wrap">
+	<a href="http://www.chataoke.com" target="_blank"><div class="logo"></div></a>
+	<div class="setting-wrap">
+		<div class="title">插件载入设置</div>
+		<div class="menu">
+			<div class="menu-wrap">
+				载入时隐藏插件：
+				<input class="mui-switch mui-switch-anim" type="checkbox" id="hiddenPlugin" value="1">
+			</div>
+		</div>
+		<div class="shortcut">
+			
+			<p>快捷键：</p>
+			<p>1、显示和隐藏插件：<input type="text" maxlength="1" id="keyPlugin" class="zimuinput" data-id="1"></p>
+			<!--<p>2、淘宝联盟登陆框：<input type="text" maxlength="1" id="keyLogin" class="zimuinput" data-id="2"></p>
+			<p>3、展开和收起价格走势：<input type="text" maxlength="1" id="keyTrend" class="zimuinput" data-id="3"></p>
+			<p>4、展开和收起推广详情：<input type="text" maxlength="1" id="keyTaoke" class="zimuinput" data-id="4"></p>
+			<p>5、展开和收起鹊桥活动：<input type="text" maxlength="1" id="keyQueqiao" class="zimuinput" data-id="5"></p>-->
+		</div>
+	</div>
+    
+    <div class="setting-wrap">
+		<div class="title">网站设置</div>
+		<div class="shortcut">
+			<p>网址：<input type="text" style="width:130px" id="keyQueqiaoUrl" data-id="6" placeholder="如cf.duoduo123.com"> <span class="anniu" id="huoqu">获取(0)</span></p>
+            <p id="chaofantip">未加入超返平台&nbsp;&nbsp;&nbsp;&nbsp;<a class="anniu" href="http://yun.duoduo123.com/index.php?m=bbx&a=view&id=213" target="_blank">安装超返</a></p>
+            <p id="huoqutip"></p>
+            <p id="logintip"><a href="http://www.alimama.com/member/login.htm?forward=http%3A%2F%2Fwww.alimama.com" target="_blank">必须在阿里妈妈页面并且登陆下使用此插件</a></p>
+            <p id="xuanpinku_p"><span id="xuanpinku_span"></span>&nbsp;<span class="anniu" id="daoru">导入</span>&nbsp;&nbsp;&nbsp;<a href="http://pub.alimama.com/manage/selection/list.htm" target="_blank" class="anniu">管理库</a></p>
+			<p>注意：无网站的忽略此设置。  <a href="http://www.duoduo123.com" target="_blank" class="anniu">申请网站</a></p>
+		</div>
+	</div>
+    
+    <div class="setting-wrap">
+		<div class="title">淘宝账号设置</div>
+		<div class="shortcut">
+			<p>账号：<input type="text" style="width:130px" id="tbname" placeholder="填写您的淘宝账号"></p>
+            <p>密码：<input type="password" style="width:130px" id="tbpwd" placeholder="填写您的淘宝密码"></p>
+            <p>功能：方便您登录淘宝</p>
+		</div>
+	</div>
+    
+    <div class="setting-wrap">
+		<div class="title" id="aaa">申请内容</div>
+		<div class="shortcut">
+			<p>定向计划申请理由：</p>
+			<p><textarea name="applyReason" placeholder="申请理由最多200个字符（100个汉字）..." id="applyReason"></textarea></p>
+		</div>
+	</div>
+    <div id="banben" style="text-align:center; padding-top:10px"></div>
+</div>
+<script language="JavaScript" src="js/jquery.min.js"></script>
+<script language="JavaScript" src="js/popup.js"></script>
+</body>
+</html>
